@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base"
+        template="/WEB-INF/views/layout.jsp">
+        <!-- <put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/menu.jsp" /> -->
+        <put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+    </definition>
+    <definition name="home" extends="base">
+        <put-attribute name="title" value="Construction Group" />
+        <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+    </definition>    
+    <definition name="contactUs" extends="base">
+        <put-attribute name="title" value="Contact Us" />
+        <put-attribute name="body" value="/WEB-INF/views/contactUs.jsp" />
+    </definition>
+    <definition name="admin_base" template="/WEB-INF/views/admin/admin_layout.jsp">
+        <put-attribute name="title" value="admin" />
+        <!-- <put-attribute name="footer" value="/WEB-INF/views/admin/admin_footer.jsp" /> -->
+    </definition>
+    <definition name="admin_home" extends="admin_base">
+        <put-attribute name="body" value="/WEB-INF/views/admin/admin_home.jsp" />
+    </definition>
+    <definition name="cityStateZipAdmin" extends="admin_base">
+        <put-attribute name="body" value="/WEB-INF/views/admin/city_state_zip.jsp" />
+    </definition>
+    <!-- Back up of what works -->
+    <!-- <definition name="base"
+        template="/WEB-INF/views/layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/menu.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+    </definition>
+    <definition name="home2" extends="base">
+        <put-attribute name="title" value="Home2" />
+        <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+    </definition> -->
+    <!-- Back up of what works -->
+    
+    <!-- <definition name="*" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" type="template"/>
+        <put-attribute name="title" value="TitleHere" type="string"/>
+    </definition> -->
+    <!-- <definition name="*/*" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" type="template"/>
+        <put-attribute name="title" value="TitleHere" type="string"/>
+    </definition> -->
+    <!-- <definition name="question" extends="base.definition">
+        <put-attribute name="title" value="Question Manager" />
+        <put-attribute name="body" value="/WEB-INF/views/question.jsp" />
+    </definition> -->
+  <!-- <definition name="default" template="/WEB-INF/layouts/default.jspx">
+    <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
+    <put-attribute name="menu" value="/WEB-INF/views/menu.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+  </definition>
+
+  <definition name="*/*" extends="default">
+    <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jspx"/>
+  </definition>
+
+  <definition name="public" template="/WEB-INF/layouts/default.jspx">
+    <put-attribute name="header" value="/WEB-INF/views/header.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+  </definition>
+
+  <definition name="*" extends="public">
+    <put-attribute name="body" value="/WEB-INF/views/{1}.jspx"/>
+  </definition> -->
+</tiles-definitions>
